@@ -37,7 +37,7 @@ h2 {
     border-radius: 8px;
     outline: none;
     transition: border-color 0.3s;
-    
+
 }
 
 #input-text:focus {
@@ -62,5 +62,52 @@ h2 {
 }
 
 #add-button:hover {
-    background-color:#0056b3;
+    background-color: #0056b3;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    background: #f8faff;
+    padding: 12px 15px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-left: 5px solid #007bff;
+    transition: transform 0.2s;
+}
+
+li:hover {
+    transform: translateX(5px);
+}
+
+.task-text {
+    cursor: pointer;
+    flex: 1;
+    color: #333;
+}
+
+.completed {
+    text-decoration: line-through;
+    opacity: 0.6;
+}
+
+.Delete-btn {
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    padding: 6px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+.Delete-btn:hover {
+    background-color: #cc0000;
 }
