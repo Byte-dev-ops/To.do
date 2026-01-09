@@ -14,6 +14,7 @@ function createTodo() {
     li.innerHTML = `
     <span class="task-text">${text}</span>
     <button class="Delete-btn" >Delete</button>
+    <button><i class="fas fa-edit edit-btn" ></i></button>
     `;
 
     li.querySelector('.task-text').addEventListener('click', function () {

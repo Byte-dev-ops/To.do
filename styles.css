@@ -111,3 +111,26 @@ li:hover {
 .Delete-btn:hover {
     background-color: #cc0000;
 }
+
+.edit-btn {
+    background-color: #FF9500;
+    color: #FFFFFF;
+    border: none !important;
+    outline: none !important;
+    display: flex;
+    cursor: pointer;
+    margin-left: 8px;  
+    font-size: 9px;
+    border-radius: 4px;
+    padding: 8px 12px;
+    align-items: center;
+    justify-content: center;
+    appearance: none;
+}
+
+.edit-btn:hover , .edit-btn:focus {
+    background-color: #E67E22;
+    outline: none !important;
+    box-shadow: none !important;
+    appearance: none;
+}
