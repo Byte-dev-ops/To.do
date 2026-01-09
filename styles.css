@@ -115,8 +115,9 @@ li:hover {
 .edit-btn {
     background-color: #FF9500;
     color: #FFFFFF;
-    border: none !important;
-    outline: none !important;
+    border: 0;
+    outline: 0;
+    box-shadow: none;
     display: flex;
     cursor: pointer;
     margin-left: 8px;  
@@ -125,12 +126,23 @@ li:hover {
     padding: 8px 12px;
     align-items: center;
     justify-content: center;
-    appearance: none;
 }
 
 .edit-btn:hover , .edit-btn:focus {
     background-color: #E67E22;
-    outline: none !important;
-    box-shadow: none !important;
+    outline: none ;
+    box-shadow: none ;
     appearance: none;
+}
+
+.edit-btn i {
+    pointer-events: none;
+}
+
+.task-text[contenteditable="true"] {
+    outline: none;              /* remove default outline */
+    border: 2px solid #FF9500;  /* your custom border */
+    border-radius: 6px;
+    padding: 6px 8px;
+    background-color: #fff8ee;
 }
