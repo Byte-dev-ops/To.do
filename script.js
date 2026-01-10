@@ -1,9 +1,9 @@
 const input = document.getElementById('input-text');
 const addBtn = document.getElementById('add-button');
 const todoList = document.getElementById('todo-list');
-const totalCount = document.getElementById('total');
-const completedCount = document.getElementById('completed') ;
-const remainingCount = document.getElementById('remaining') ;
+const totalCount = document.getElementById('totalCount');
+const completedCount = document.getElementById('completedCount') ;
+const remainingCount = document.getElementById('remainingCount') ;
 
 function createTodo() {
     const text = input.value.trim();
