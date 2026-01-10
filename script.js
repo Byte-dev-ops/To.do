@@ -1,6 +1,9 @@
 const input = document.getElementById('input-text');
 const addBtn = document.getElementById('add-button');
 const todoList = document.getElementById('todo-list');
+const totalCount = document.getElementById('total');
+const completedCount = document.getElementById('completed') ;
+const remainingCount = document.getElementById('remaining') ;
 
 function createTodo() {
     const text = input.value.trim();
@@ -9,7 +12,6 @@ function createTodo() {
         alert("Please enter any text");
         return;
     }
-
     const li = document.createElement('li');
 
     li.innerHTML = `
@@ -24,10 +26,12 @@ function createTodo() {
 
     taskText.addEventListener('click', function () {
         this.classList.toggle('completed');
+        taskCounter()
     });
 
     deleteBtn.addEventListener('click', function () {
         li.remove();
+        taskCounter()
     });
 
     editBtn.addEventListener('click', function () {
@@ -52,9 +56,10 @@ function createTodo() {
     taskText.addEventListener('blur', function () {
         taskText.removeAttribute("contenteditable");
     });
-
     todoList.appendChild(li);
     input.value = "";
+
+    taskCounter();
 }
 
 addBtn.addEventListener('click', createTodo);
@@ -64,3 +69,18 @@ input.addEventListener('keypress', (e) => {
         createTodo();
     }
 });
+
+function taskCounter() {
+
+    const allTasks = todoList.querySelectorAll("li");
+
+    const completedTasks = todoList.querySelectorAll(".task-text.completed");
+
+    const total = allTasks.length;
+    const completed = completedTasks.length;
+    const remaining = total - completed;
+
+    totalCount.textContent = total;
+    completedCount.textContent = completed;
+    remainingCount.textContent = remaining;
+}

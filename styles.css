@@ -146,3 +146,11 @@ li:hover {
     padding: 6px 8px;
     background-color: #fff8ee;
 }
+#counter {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    gap: 20px;
+    padding-left: 10px;
+    margin-left: 50px;
+}
